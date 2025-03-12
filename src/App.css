@@ -1,14 +1,15 @@
 .App {
   text-align: center;
+  margin: 0 200px;
+
 }
 
 nav{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 100px;
   align-items: center;
-  padding-top: 40px;
-  padding-left: 10%;
-  padding-right: 10%;
+ 
 }
 
 .App-logo{
@@ -45,11 +46,32 @@ button{
   font-family: "Poppins", sans-serif;
 }
 
+.search-bar {
+  display: flex;
+  align-items: center; 
+  padding: 5px;
+  width: 250px;
+}
+
+.search-bar input {
+  border: 2;
+  outline: none;
+  width: 250px;
+  padding: 10px 20px;
+}
+
+.search-bar button {
+  background: black;
+  border: none;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+}
 
 .container{
   text-align: justify;
-  margin: 60px;
-  padding-left: 80px;
   position: relative;
 
 }
@@ -71,20 +93,18 @@ p{
 }
 .container button{
   position: absolute;
-  margin-top: 10px;
   right: 10px;
+  
 }
 
 .spotlight{
-  margin: 30px;
-
-  width: 600px;
-  height: 600px;
+  /* width: 800px; */
+  /* height: 600px; */
+  background-color: green;
   border-color: black;
-  border: 5cm;
 }
 /* .spotlight h2{
   position: absolute;
-  font-weight: 100;
+  font-weight: 100
   right:10px;
 } */
