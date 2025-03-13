@@ -35,7 +35,7 @@ nav ul li a:hover{
 }
 
 
-button{
+nav button{
   border: none;
   background: black; 
   padding: 12px 30px;
@@ -54,10 +54,13 @@ button{
 }
 
 .search-bar input {
-  border: 2;
+  border: 10;
   outline: none;
   width: 250px;
   padding: 10px 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
 }
 
 .search-bar button {
