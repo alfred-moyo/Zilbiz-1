@@ -30,6 +30,12 @@ function App() {
       </div>
       <div class="spotlight">
         {/* <h2>Spotlight</h2> */}
+        <div> 
+        </div>
+        <div> 
+        </div>
+        <div> 
+        </div>
       </div>
     </div>
   );
