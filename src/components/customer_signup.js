@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
-import './Customer_signup.css';
+import logo from '../logo.png';
+import './customer_signup.css';
 
 function C_Signup() {
   const [errors, setErrors] = useState({});

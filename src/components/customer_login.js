@@ -1,5 +1,7 @@
-import logo from './logo.svg';
-import './Customer_login.css';
+import React from 'react'; 
+import logo from "../logo.png"
+import './customer_login.css';
+import SignUp from "./customer_signup";
 
 function C_Login() {
   return (
@@ -16,7 +18,7 @@ function C_Login() {
         </form>
         <a href="/home" className="back-home">Back to Home</a>
         <div className="signup-link">
-          No account? <a href="/signup">Sign Up</a>
+          No account? <a href={SignUp}>Sign Up</a>
         </div>
       </div>
     </div>
