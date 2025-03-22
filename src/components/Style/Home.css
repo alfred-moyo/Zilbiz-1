@@ -1,0 +1,56 @@
+
+.Home .container {
+    text-align: center;
+  }
+  
+  h1 {
+    padding-top: 10px;
+    font-size: 70px;
+  }
+  
+  h3 {
+    font-size: 25px;
+  }
+  
+  h3 span {
+    animation: shakeY 2s infinite;
+  }
+  
+  p {
+    width: 80%;
+  }
+  
+  .container button {
+    position: absolute;
+    right: 10px;
+  }
+  
+  /* Spotlight Section */
+  .spotlight {
+    margin-top: 50px;
+    text-align: left;
+  }
+  
+  .spotlight h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .spotlight-posts {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .post {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+  }
+  
+  .post p {
+    margin: 10px 0;
+  }
+  
+  

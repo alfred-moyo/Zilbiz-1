@@ -1,0 +1,85 @@
+.Navbar {
+    text-align: center;
+    margin: 0 200px;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  
+  .Nav-logo {
+    border-radius: 50%;
+    width: 80px;
+    height: auto;
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 400px;
+    margin: 0 20px;
+  }
+  
+  .search-bar input {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-family: "Poppins", sans-serif;;
+  }
+  
+  .search-bar button {
+    padding: 10px;
+    background: black;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 43px;
+  }
+  
+  .search-bar button:hover {
+    background: #333;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .navbar-links a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar-links a:hover {
+    color: gray;
+    transition: 0.3s;
+  }
+
+
+  
+  .navbar-button button {
+    border: none;
+    background: black;
+    padding: 12px 30px;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+  
+  }
+  
+  .navbar-button button:hover {
+    background: #333;
+  }

@@ -1,28 +1,35 @@
-import React from 'react'; 
-import logo from "../logo.png"
-import './customer_login.css';
-import SignUp from "./customer_signup";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc'; // Import Google icon
+import logo from '../logo.png';
+import '../components/Style/Customer_login.css';
 
-function C_Login() {
+function CustomerLogin() {
   return (
-    <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
+    <div className="CustomerLogin">
+      <img src={logo} className="CustomerLogin-logo" alt="logo" />
       <div className="container">
         <h2>Welcome back</h2>
-        <button className="google-btn">Sign in with Google</button>
-        <div className="or-divider">or</div>
+        <button className="google-btn">
+          <FcGoogle className="google-icon" /> Sign in with Google
+        </button>
+        <div className="or-divider">
+          <span>or</span>
+        </div>
         <form className="login-form">
           <input type="email" placeholder="Email" required />
           <input type="password" placeholder="Password" required />
           <button type="submit">Sign In</button>
         </form>
-        <a href="/home" className="back-home">Back to Home</a>
+        <Link to="/" className="back-home">
+          Back to Home
+        </Link>
         <div className="signup-link">
-          No account? <a href={SignUp}>Sign Up</a>
+          No account? <Link to="/signup">Sign Up</Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default C_Login;
+export default CustomerLogin;

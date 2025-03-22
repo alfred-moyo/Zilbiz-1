@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import Link
 import logo from '../logo.png';
-import './customer_signup.css';
+import '../components/Style/Customer_signup.css';
 
-function C_Signup() {
+function CustomerSignup() {
   const [errors, setErrors] = useState({});
   const [formData, setFormData] = useState({
     name: '',
@@ -67,7 +68,7 @@ function C_Signup() {
 
     // If no errors, proceed with form submission
     console.log('Form Data:', formData);
-    setErrors({}); // Clear errors
+    setErrors({}); 
     // You can add an API call here to send data to the backend
   };
 
@@ -75,8 +76,8 @@ function C_Signup() {
   const isFormValid = Object.keys(errors).length === 0;
 
   return (
-    <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
+    <div className="CustomerSignup">
+      <img src={logo} className="CustomerSignup-logo" alt="logo" />
       <div className="container">
         <h2>Welcome! Sign up to get started.</h2>
         <form className="signup-form" onSubmit={handleSubmit}>
@@ -117,13 +118,19 @@ function C_Signup() {
             Sign Up
           </button>
         </form>
-        <a href="/home" className="back-home">Back to Home</a>
+
+        {/* Replace <a> with <Link> */}
+        <Link to="/home" className="back-home">
+          Back to Home
+        </Link>
+
         <div className="login-link">
-          Have an account? <a href="/login">Sign In</a>
+          Have an account?{' '}
+          <Link to="/login">Sign In</Link>
         </div>
       </div>
     </div>
   );
 }
 
-export default C_Signup;
+export default CustomerSignup;

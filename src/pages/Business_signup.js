@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../logo.png'; 
-import './business_signup.css'; 
+import '../components/Style/Business_signup.css'; 
 
 const BusinessSignup = () => {
   const handleSubmit = (event) => {
@@ -16,8 +16,8 @@ const BusinessSignup = () => {
   };
 
   return (
-    <div className="App">
-      <img src={logo} className="App-logo" alt="logo" />
+    <div className="BusinessSignUp">
+      <img src={logo} className="BusinessSignUp-logo" alt="logo" />
       <div className="container">
         <h2>Welcome! Sign up to get started.</h2>
         <form className="signup-form" onSubmit={handleSubmit}>
