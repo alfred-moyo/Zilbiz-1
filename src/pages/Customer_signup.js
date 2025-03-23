@@ -120,7 +120,7 @@ function CustomerSignup() {
         </form>
 
         {/* Replace <a> with <Link> */}
-        <Link to="/home" className="back-home">
+        <Link to="/" className="back-home">
           Back to Home
         </Link>
 
