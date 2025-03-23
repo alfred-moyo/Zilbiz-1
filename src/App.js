@@ -6,6 +6,7 @@ import CustomerSignup from './pages/Customer_signup';
 // import Contact from './components/contact';
 import BusinessLogin from './pages/Business_login';
 import BusinessSignup from './pages/Business_signup';
+import FAQ from './pages/FAQ';
 import { 
   BrowserRouter as Router, 
   Route, 
@@ -24,6 +25,7 @@ function App() {
           <Route path="/business-login" element={<BusinessLogin />} />
           <Route path="/business-signup" element={<BusinessSignup />} />
           {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/faq" element={<FAQ />} />
 
         </Routes>
     </Router>
