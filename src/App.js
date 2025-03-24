@@ -3,7 +3,7 @@ import Home from './pages/Home'
 import CustomerLogin from './pages/Customer_login';
 import CustomerSignup from './pages/Customer_signup';
 // import Reviews from './components/reviews';
-// import Contact from './components/contact';
+import ContactUs from './pages/Contact';
 import BusinessLogin from './pages/Business_login';
 import BusinessSignup from './pages/Business_signup';
 import FAQ from './pages/FAQ';
@@ -24,7 +24,7 @@ function App() {
           {/* <Route path="/write-a-review" element={<Reviews />} /> */}
           <Route path="/business-login" element={<BusinessLogin />} />
           <Route path="/business-signup" element={<BusinessSignup />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="/faq" element={<FAQ />} />
 
         </Routes>

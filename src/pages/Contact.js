@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../logo.png';
-import './Style/ContactUs.css';
+import '../components/Style/Contact.css';
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -63,7 +63,7 @@ function ContactUs() {
           </div>
           <button type="submit">Send Message</button>
         </form>
-        <Link to="/home" className="back-home">
+        <Link to="/" className="back-home">
           Back to Home
         </Link>
       </div>
