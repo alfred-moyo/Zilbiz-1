@@ -2,10 +2,11 @@ import './App.css';
 import Home from './pages/Home'
 import CustomerLogin from './pages/Customer_login';
 import CustomerSignup from './pages/Customer_signup';
-// import Reviews from './components/reviews';
+import Reviews from './pages/Reviews';
 import ContactUs from './pages/Contact';
 import BusinessLogin from './pages/Business_login';
 import BusinessSignup from './pages/Business_signup';
+import About from './pages/About';
 import FAQ from './pages/FAQ';
 import { 
   BrowserRouter as Router, 
@@ -21,10 +22,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<CustomerLogin />} />
           <Route path="/signup" element={<CustomerSignup />} />
-          {/* <Route path="/write-a-review" element={<Reviews />} /> */}
+          <Route path="/write-a-review" element={<Reviews />} />
           <Route path="/business-login" element={<BusinessLogin />} />
           <Route path="/business-signup" element={<BusinessSignup />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
 
         </Routes>
