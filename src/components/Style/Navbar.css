@@ -41,7 +41,7 @@
   }
   
   .search-bar input {
-    /* width: 70%; */
+    width: 250px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
@@ -54,10 +54,15 @@
   
   .search-bar button {
     position: relative;
+    background-color: #000000;
+    padding: 10px;
     width: 50px;
     height: 37px;
     left: -10px;
     border-radius: 0 5px 5px 0;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
   }
 
   .search-bar button svg {
