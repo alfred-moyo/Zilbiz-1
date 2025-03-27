@@ -1,56 +1,34 @@
+.universal-container {
+  margin: 100px 200px 0
+}
 
-.Home .container {
-    text-align: center;
-  }
-  
-  h1 {
-    padding-top: 10px;
-    font-size: 70px;
-  }
-  
-  h3 {
-    font-size: 25px;
-  }
-  
-  h3 span {
-    animation: shakeY 2s infinite;
-  }
-  
-  p {
-    width: 80%;
-  }
-  
-  .container button {
-    position: absolute;
-    right: 10px;
-  }
-  
-  /* Spotlight Section */
-  .spotlight {
-    margin-top: 50px;
-    text-align: left;
-  }
-  
-  .spotlight h2 {
-    font-size: 30px;
-    margin-bottom: 20px;
-  }
-  
-  .spotlight-posts {
-    display: flex;
-    gap: 20px;
-  }
-  
-  .post {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    flex: 1;
-  }
-  
-  .post p {
-    margin: 10px 0;
-  }
-  
-  
+.hero h1{
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.hero{
+  position: relative;
+}
+
+.hero p{
+  font-weight: 300;
+}
+
+.hero button {
+  position: absolute;
+  border-radius: 5px;
+  border: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  padding: 12px 30px;
+  right: 0;
+}
+
+.spotlight-posts p{
+  font-size: 15px;
+  font-weight: 300;
+}

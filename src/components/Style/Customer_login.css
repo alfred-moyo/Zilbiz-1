@@ -22,7 +22,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-h2 {
+.CustomerLogin h2 {
   margin-bottom: 20px;
   font-size: 24px;
   color: #000000; /* Black text */

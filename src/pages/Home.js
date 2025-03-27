@@ -2,24 +2,26 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import '../components/Style/Home.css';
-// Removed unused import: import 'animate.css';
 
 function Home() {
   return (
     <div className="Home">
       <Navbar />
-      <div className="container">
-        <h1>ZilBiz</h1>
-        <h3>Empower Your Business, Elevate Your Presence! <span>🚀</span></h3>
-        <p>
-          Welcome to ZilBiz, Mauritius’s premier SME listing and review platform!
-          Whether you're a small business owner looking to grow or a customer searching
-          for the best local services, we’ve got you covered. ✨
-        </p>
-        <button>Register Your Business</button>
+      <div className="universal-container">
+        <div className='hero'>
+            <h1>ZilBiz</h1>
+            <h3>Empower Your Business, Elevate Your Presence! <span>🚀</span></h3>
+            <p>
+            Welcome to ZilBiz, Mauritius’s premier SME listing and review platform!
+            Whether you're a small business owner looking to grow or a customer searching
+            for the best local services, we’ve got you covered. ✨
+            </p>
+            <button>Register Your Business</button>
+        </div>
       </div>
 
-      {/* Spotlight Section */}
+      <div className='universal-container'>
+        {/* Spotlight Section */}
       <div className="spotlight">
         <h2>Spotlight</h2>
         <div className="spotlight-posts">
@@ -31,7 +33,7 @@ function Home() {
           <div className="post">
             <p><strong>Albert</strong> recently posted</p>
             <p>Ritesh Garage ●</p>
-            <p>Itken’s garage has the best customer service.</p>
+            <p>Ritesh's garage has the best customer service.</p>
           </div>
           <div className="post">
             <p><strong>Jennifer</strong> recently posted</p>
@@ -40,6 +42,8 @@ function Home() {
           </div>
         </div>
       </div>
+      </div>
+      
       <Footer />
     </div>
     

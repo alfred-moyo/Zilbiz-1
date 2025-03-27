@@ -1,6 +1,6 @@
 import React from 'react';
 import './Style/Navbar.css';
-import logo from '../logo.png';
+// import logo from '../logo.png';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -9,14 +9,20 @@ function Navbar() {
     <div className="Navbar">
       <nav>
         {/* Logo */}
-        <img src={logo} className="Nav-logo" alt="ZilBiz Logo" />
+        {/* <img src={logo} className="Nav-logo" alt="ZilBiz Logo" /> */}
+        <Link to="/">
+        <h2 className="Nav-title">ZilBiz</h2>
+        </Link>
 
         {/* Search Bar */}
         <div className="search-bar">
           <input type="text" placeholder="Search" aria-label="Search" />
-          <button aria-label="Search Button">
-            <FaSearch />
-          </button>
+          <div className="nav-search-btn">
+            <button aria-label='Search button'>
+              <FaSearch />
+            </button>
+          </div>
+          
         </div>
 
         {/* Navigation Links */}

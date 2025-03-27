@@ -1,22 +1,38 @@
 .Navbar {
+  position: fixed;
     text-align: center;
-    margin: 0 200px;
-  }
+    font-family: "Poppins", sans-serif;
+    border-bottom: solid 2px;
+    background-color: white;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
   
   nav {
     display: flex;
+    margin: 0 200px;
     justify-content: space-between;
     align-items: center;
     gap: 10px;
     padding: 20px 0;
   }
   
-  .Nav-logo {
+  /* .Nav-logo {
     border-radius: 50%;
     width: 80px;
     height: auto;
-  }
+  } */
   
+  .Nav-title{
+    margin: 0 !important;
+    font-size: 30px !important;
+    font-weight: 700 !important;
+  }
+
+  nav a{
+    text-decoration: none;
+  }
   .search-bar {
     display: flex;
     align-items: center;
@@ -25,24 +41,30 @@
   }
   
   .search-bar input {
-    width: 70%;
+    /* width: 70%; */
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px 0 0 5px;
     outline: none;
-    font-family: "Poppins", sans-serif;;
+  }
+
+  .nav-search-btn {
+    width: 20px;
   }
   
   .search-bar button {
-    padding: 10px;
-    background: black;
-    border: none;
+    position: relative;
+    width: 50px;
+    height: 37px;
+    left: -10px;
     border-radius: 0 5px 5px 0;
-    color: white;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    height: 43px;
+  }
+
+  .search-bar button svg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
   }
   
   .search-bar button:hover {
@@ -76,7 +98,6 @@
     font-weight: bold;
     font-size: 15px;
     cursor: pointer;
-    font-family: "Poppins", sans-serif;
   
   }
   

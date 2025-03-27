@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaStar, FaRegStar, FaSearch, FaChevronLeft, FaMapMarkerAlt, FaCamera } from 'react-icons/fa';
 import { MAP_API_KEY, MAP_DEFAULT_OPTIONS } from '../config/googleMaps';
-import logo from '../logo.png';
+import Navbar from '../components/Navbar'
+import Footer from '../components/Footer';
 import '../components/Style/Reviews.css';
 
 function WriteReview() {
@@ -156,8 +157,8 @@ function WriteReview() {
 
   return (
     <div className="WriteReview">
-      <img src={logo} className="WriteReview-logo" alt="ZilBiz Logo" />
-      <div className="container">
+      <Navbar />
+      <div className="review-container">
         {step === 1 ? (
           <>
             <h2>Find a Business to Review</h2>
