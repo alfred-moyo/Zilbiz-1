@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { FcGoogle } from 'react-icons/fc'; // Import Google icon
-import logo from '../logo.png';
 import '../components/Style/Customer_login.css';
 
 function CustomerLogin() {
   return (
     <div className="CustomerLogin">
-      <img src={logo} className="CustomerLogin-logo" alt="logo" />
-      <div className="container">
+      <Link to="/">
+              <h2 className="logo-title">ZilBiz</h2>
+              </Link>
+      <div className="customerlogin-container">
         <h2>Welcome back</h2>
         <button className="google-btn">
           <FcGoogle className="google-icon" /> Sign in with Google
