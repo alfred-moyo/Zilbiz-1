@@ -16,7 +16,7 @@
     margin-bottom: 20px;
   }
   
-  .container {
+  .ContactUs-container {
     max-width: 600px;
     width: 100%;
     padding: 30px;
@@ -26,13 +26,13 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   }
   
-  h2 {
+  .ContactUs-container h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #000000; /* Black text */
   }
   
-  p {
+  .ContactUs-container p {
     margin-bottom: 20px;
     font-size: 16px;
     color: #666666; /* Medium gray text */
@@ -42,38 +42,38 @@
     text-align: left;
   }
   
-  .form-group {
+  .contact-form .form-group {
     margin-bottom: 15px;
   }
   
-  .form-group input,
-  .form-group textarea {
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
     width: 100%;
     padding: 12px;
     border: 1px solid #e0e0e0; /* Light gray border */
     border-radius: 8px;
     font-size: 14px;
-    color: #000000; /* Black text */
-    background-color: #f9f9f9; /* Light gray background */
+    color: #000000; 
+    background-color: #f9f9f9; 
     transition: border-color 0.3s ease;
   }
   
-  .form-group input:focus,
-  .form-group textarea:focus {
+  .contact-form .form-group input:focus,
+  .contact-form .form-group textarea:focus {
     border-color: #000000; /* Black border on focus */
     outline: none;
   }
   
-  .form-group textarea {
-    resize: vertical; /* Allow vertical resizing */
+  .contact-form .form-group textarea {
+    resize: vertical; 
     min-height: 150px;
   }
   
-  .container button {
+  .ContactUs-container button {
     width: 100%;
     padding: 12px;
-    background-color: #000000; /* Black background */
-    color: #ffffff; /* White text */
+    background-color: #000000; 
+    color: #ffffff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -82,7 +82,7 @@
     transition: background-color 0.3s ease;
   }
   
-  button:hover {
+  .ContactUs-container button:hover {
     background-color: #333333; /* Dark gray on hover */
   }
   

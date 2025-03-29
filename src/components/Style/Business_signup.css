@@ -8,7 +8,7 @@
     pointer-events: none;
   }
   
-  .container {
+  .BusinessSignUp-container {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -17,11 +17,11 @@
     background-color: #f9f9f9;
   }
   
-  h2 {
+  .BusinessSignUp-container h2 {
     margin-bottom: 20px;
   }
   
-  .signup-form input {
+  .business-signup-form input {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -29,7 +29,7 @@
     border-radius: 4px;
   }
   
-  .signup-form button {
+  .business-signup-form button {
     width: 100%;
     padding: 10px;
     background-color: #4CAF50;
@@ -39,7 +39,7 @@
     cursor: pointer;
   }
   
-  .signup-form button:hover {
+  .business-signup-form button:hover {
     background-color: #45a049;
   }
   
@@ -54,16 +54,4 @@
     text-decoration: underline;
   }
   
-  .login-link {
-    margin-top: 15px;
-    color: #666;
-  }
-  
-  .login-link a {
-    color: #4285F4;
-    text-decoration: none;
-  }
-  
-  .login-link a:hover {
-    text-decoration: underline;
-  }
+ 

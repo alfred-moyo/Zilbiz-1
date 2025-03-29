@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // Import Link
-import logo from '../logo.png';
+import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+import ReCAPTCHA from "react-google-recaptcha";
 import '../components/Style/Customer_signup.css';
 
 function CustomerSignup() {
@@ -10,6 +11,7 @@ function CustomerSignup() {
     email: '',
     password: '',
   });
+  const recaptchaRef = useRef(null);
 
   const validateForm = (data) => {
     const errors = {};
@@ -56,20 +58,29 @@ function CustomerSignup() {
     setErrors(updatedErrors);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     // Validate the entire form
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      return; // Stop form submission if there are errors
+      return;
     }
 
-    // If no errors, proceed with form submission
-    console.log('Form Data:', formData);
-    setErrors({}); 
-    // You can add an API call here to send data to the backend
+    try {
+      // Execute reCAPTCHA
+      const token = await recaptchaRef.current.executeAsync();
+      
+      // Proceed with form submission including reCAPTCHA token
+      console.log('Form Data:', { ...formData, recaptchaToken: token });
+      setErrors({});
+      
+      // Add your API call here with the recaptcha token
+    } catch (error) {
+      console.error('reCAPTCHA error:', error);
+      alert('Failed to verify reCAPTCHA. Please try again.');
+    }
   };
 
   // Check if the form is valid
@@ -77,9 +88,17 @@ function CustomerSignup() {
 
   return (
     <div className="CustomerSignup">
-      <img src={logo} className="CustomerSignup-logo" alt="logo" />
-      <div className="container">
-        <h2>Welcome! Sign up to get started.</h2>
+      <Link to="/">
+          <h2 className="logo-title">ZilBiz</h2>
+      </Link>
+      <div className="customersignup-container">
+        <h2>Sign up to get started.</h2>
+        <button className="google-btn">
+          <FcGoogle className="google-icon" /> Sign up with Google
+        </button>
+        <div className="or-divider">
+          <span>or</span>
+        </div>
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="form-group">
             <input
@@ -118,11 +137,12 @@ function CustomerSignup() {
             Sign Up
           </button>
         </form>
-
-        {/* Replace <a> with <Link> */}
-        <Link to="/" className="back-home">
-          Back to Home
-        </Link>
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey="6Ldk7AIrAAAAAL2Wd660KO73pwESxmOZ0pbzlLiO" // Replace with your site key
+          size="invisible"
+          badge="inline"
+        />
 
         <div className="login-link">
           Have an account?{' '}

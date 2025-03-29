@@ -18,9 +18,9 @@ const BusinessSignup = () => {
   return (
     <div className="BusinessSignUp">
       <img src={logo} className="BusinessSignUp-logo" alt="logo" />
-      <div className="container">
+      <div className="BusinessSignUp-container">
         <h2>Welcome! Sign up to get started.</h2>
-        <form className="signup-form" onSubmit={handleSubmit}>
+        <form className="business-signup-form" onSubmit={handleSubmit}>
           <input type="text" name="name" placeholder="Name" required />
           <input type="email" name="email" placeholder="Email" required />
           <input type="password" name="password" placeholder="Password" required />

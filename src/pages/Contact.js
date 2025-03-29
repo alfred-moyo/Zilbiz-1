@@ -28,7 +28,7 @@ function ContactUs() {
   return (
     <div className="ContactUs">
       <img src={logo} className="ContactUs-logo" alt="ZilBiz Logo" />
-      <div className="container">
+      <div className="ContactUs-container">
         <h2>Contact Us</h2>
         <p>Have questions or feedback? We'd love to hear from you!</p>
         <form className="contact-form" onSubmit={handleSubmit}>
