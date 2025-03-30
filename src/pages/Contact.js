@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../logo.png';
+import Navbar from '../components/Navbar';
 import '../components/Style/Contact.css';
 
 function ContactUs() {
@@ -27,7 +27,7 @@ function ContactUs() {
 
   return (
     <div className="ContactUs">
-      <img src={logo} className="ContactUs-logo" alt="ZilBiz Logo" />
+      <Navbar />
       <div className="ContactUs-container">
         <h2>Contact Us</h2>
         <p>Have questions or feedback? We'd love to hear from you!</p>
@@ -63,9 +63,6 @@ function ContactUs() {
           </div>
           <button type="submit">Send Message</button>
         </form>
-        <Link to="/" className="back-home">
-          Back to Home
-        </Link>
       </div>
     </div>
   );
