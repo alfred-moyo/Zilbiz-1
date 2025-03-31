@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import ReCAPTCHA from "react-google-recaptcha";
 import '../components/Style/Contact.css';
 
 function ContactUs() {
@@ -9,6 +11,7 @@ function ContactUs() {
     email: '',
     message: '',
   });
+  const [isVerified, setIsVerified] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,9 +23,14 @@ function ContactUs() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!isVerified) {
+      alert("Please verify you're not a robot");
+      return;
+    }
     console.log('Form Data:', formData);
     alert('Thank you for contacting us! We will get back to you soon.');
     setFormData({ name: '', email: '', message: '' }); // Clear form
+    setIsVerified(false); // Reset reCAPTCHA
   };
 
   return (
@@ -61,9 +69,16 @@ function ContactUs() {
               required
             />
           </div>
+          <div className="recaptcha-container">
+            <ReCAPTCHA
+              sitekey="6Ldk7AIrAAAAAL2Wd660KO73pwESxmOZ0pbzlLiO" 
+              onChange={() => setIsVerified(true)}
+            />
+          </div>
           <button type="submit">Send Message</button>
         </form>
       </div>
+      <Footer />
     </div>
   );
 }

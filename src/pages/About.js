@@ -8,8 +8,8 @@ function About() {
   return (
     <div className="About">
       <Navbar />
-      <div className="content-wrapper">
-        <div className="container">
+      <div className="about-content-wrapper">
+        <div className="about-container">
           <h1>About <span className="futuristic-underline">ZilBiz</span></h1>
           
           <section className="mission-section">
@@ -25,9 +25,14 @@ function About() {
             <section className="story-section">
               <h2><span className="section-number">02</span>Our Story</h2>
               <p>
-                Founded in 2023, ZilBiz began as a passion project to highlight Mauritius' vibrant SME sector. 
-                What started as a simple directory has grown into the island's premier business review platform, 
-                helping thousands of businesses thrive.
+              ZilBiz is pioneering simple, affordable data tools for Mauritius' small businesses. 
+              We're building smart solutions to help local entrepreneurs compete like corporations - 
+              turning numbers into growth opportunities.
+              </p>
+              <p>
+              Still in development but driven by purpose: 
+              To make business intelligence accessible to every shop owner, 
+              artisan and startup across the island.
               </p>
             </section>
 
@@ -81,6 +86,7 @@ function About() {
           </section>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

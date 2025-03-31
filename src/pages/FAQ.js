@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../logo.png';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import '../components/Style/FAQ.css';
 
 function FAQ() {
@@ -35,8 +36,8 @@ function FAQ() {
 
   return (
     <div className="FAQ">
-      <img src={logo} className="FAQ-logo" alt="ZilBiz Logo" />
-      <div className="container">
+      <Navbar />
+      <div className="faq-container">
         <h2>Frequently Asked Questions</h2>
         <div className="faq-list">
           {faqData.map((faq, index) => (
@@ -53,10 +54,8 @@ function FAQ() {
             </div>
           ))}
         </div>
-        <Link to="/" className="back-home">
-          Back to Home
-        </Link>
       </div>
+      <Footer />
     </div>
   );
 }

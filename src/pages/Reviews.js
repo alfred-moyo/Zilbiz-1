@@ -277,7 +277,7 @@ function WriteReview() {
                 />
               </div>
 
-              <div className="photo-upload">
+              <div className="review-photo-upload">
                 <label htmlFor="photo-upload" className="upload-btn">
                   <FaCamera /> Add Photos ({photoPreviews.length}/5)
                   <input

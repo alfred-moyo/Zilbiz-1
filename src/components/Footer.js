@@ -29,11 +29,6 @@ function Footer() {
             </Link>
           </li>
           <li>
-            <Link to="/services" aria-label="Services">
-              Services
-            </Link>
-          </li>
-          <li>
             <Link to="/faq" aria-label="FAQ">
               FAQ
             </Link>

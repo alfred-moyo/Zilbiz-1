@@ -1,6 +1,5 @@
 import React from 'react';
 import './Style/Navbar.css';
-// import logo from '../logo.png';
 import { FaSearch } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 

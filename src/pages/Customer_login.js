@@ -11,7 +11,6 @@ function CustomerLogin() {
     e.preventDefault();
     try {
       const token = await recaptchaRef.current.executeAsync();
-      // Add your form submission logic with the token here
       console.log('reCAPTCHA token:', token);
     } catch (error) {
       console.error('reCAPTCHA error:', error);
