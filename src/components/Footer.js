@@ -38,6 +38,11 @@ function Footer() {
               Contact
             </Link>
           </li>
+          <li>
+            <Link to="/admin" aria-label="Admin">
+              Admin
+            </Link>
+          </li>
         </ul>
       </div>
 
