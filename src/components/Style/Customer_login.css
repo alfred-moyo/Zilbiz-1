@@ -119,19 +119,18 @@
   background-color: #333333; 
 }
 
-.back-home {
-  margin-top: 100px;
+.admin-user {
+  margin-top: 20px;
   display: block;
   margin-left: 1px;
-  color: #000000; 
+  color: #ff0000; 
   text-decoration: none;
   font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease;
 }
 
-.back-home:hover {
-  color: #000000;
+.admin-user:hover {
   text-decoration: underline;
 }
 

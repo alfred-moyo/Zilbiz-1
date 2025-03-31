@@ -1,7 +1,6 @@
-import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
-import { FcGoogle } from 'react-icons/fc';
-import ReCAPTCHA from "react-google-recaptcha";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; 
+import { FcGoogle } from 'react-icons/fc'; 
 import '../components/Style/Customer_signup.css';
 
 function CustomerSignup() {
@@ -11,7 +10,6 @@ function CustomerSignup() {
     email: '',
     password: '',
   });
-  const recaptchaRef = useRef(null);
 
   const validateForm = (data) => {
     const errors = {};
@@ -58,29 +56,20 @@ function CustomerSignup() {
     setErrors(updatedErrors);
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     // Validate the entire form
     const validationErrors = validateForm(formData);
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
-      return;
+      return; // Stop form submission if there are errors
     }
 
-    try {
-      // Execute reCAPTCHA
-      const token = await recaptchaRef.current.executeAsync();
-      
-      // Proceed with form submission including reCAPTCHA token
-      console.log('Form Data:', { ...formData, recaptchaToken: token });
-      setErrors({});
-      
-      // Add your API call here with the recaptcha token
-    } catch (error) {
-      console.error('reCAPTCHA error:', error);
-      alert('Failed to verify reCAPTCHA. Please try again.');
-    }
+    // If no errors, proceed with form submission
+    console.log('Form Data:', formData);
+    setErrors({}); 
+    // You can add an API call here to send data to the backend
   };
 
   // Check if the form is valid
@@ -137,13 +126,6 @@ function CustomerSignup() {
             Sign Up
           </button>
         </form>
-        <ReCAPTCHA
-          ref={recaptchaRef}
-          sitekey="6Ldk7AIrAAAAAL2Wd660KO73pwESxmOZ0pbzlLiO" // Replace with your site key
-          size="invisible"
-          badge="inline"
-        />
-
         <div className="login-link">
           Have an account?{' '}
           <Link to="/login">Sign In</Link>
