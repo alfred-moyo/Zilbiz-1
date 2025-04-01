@@ -8,6 +8,8 @@ import BusinessLogin from './pages/Business_login';
 import BusinessSignup from './pages/Business_signup';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
+import TermsAndConditions from './pages/TermsAndConditions'
+import TermsOfUse from './pages/TermsOfUse'
 import { 
   BrowserRouter as Router, 
   Route, 
@@ -28,6 +30,8 @@ function App() {
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/about" element={<About />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/terms&conditions" element={<TermsAndConditions />} />
+          <Route path="/terms-of-use" element={<TermsOfUse />} />
 
         </Routes>
     </Router>

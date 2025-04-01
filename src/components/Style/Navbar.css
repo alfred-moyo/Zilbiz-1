@@ -1,111 +1,160 @@
 .Navbar {
   position: fixed;
-    text-align: center;
-    font-family: "Poppins", sans-serif;
-    border-bottom: solid 2px;
-    background-color: white;
-    top: 0;
-    width: 100%;
-    z-index: 1;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  border-bottom: solid 2px;
+  background-color: white;
+  top: 0;
+  width: 100%;
+  z-index: 1;
 }
-  
-  nav {
-    display: flex;
-    margin: 0 200px;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-    padding: 20px 0;
-  }
-  
-  /* .Nav-logo {
-    border-radius: 50%;
-    width: 80px;
-    height: auto;
-  } */
-  
-  .Nav-title{
-    margin: 0 !important;
-    font-size: 30px !important;
-    font-weight: 700 !important;
-  }
 
-  nav a{
-    text-decoration: none;
-  }
-  .search-bar {
-    display: flex;
-    align-items: center;
-    width: 400px;
-    margin: 0 20px;
-  }
-  
-  .search-bar input {
-    width: 250px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-  }
+nav {
+  display: flex;
+  margin: 0 200px;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
 
-  .nav-search-btn {
-    width: 20px;
-  }
-  
-  .search-bar button {
-    position: relative;
-    background-color: #000000;
-    padding: 10px;
-    width: 50px;
-    height: 37px;
-    left: -10px;
-    border-radius: 0 5px 5px 0;
-    color: #ffffff;
-    cursor: pointer;
-    border: none;
-  }
+.Nav-title {
+  margin: 0 !important;
+  font-size: 30px !important;
+  font-weight: 700 !important;
+}
 
-  .search-bar button svg {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .search-bar button:hover {
-    background: #333;
-  }
-  
-  .navbar-links {
-    display: flex;
-    gap: 40px;
-  }
-  
-  .navbar-links a {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .navbar-links a:hover {
-    color: gray;
-    transition: 0.3s;
-  }
+nav a {
+  text-decoration: none;
+}
 
+.search-bar {
+  display: flex;
+  align-items: center;
+  width: 400px;
+  margin: 0 20px;
+}
 
-  
-  .navbar-button button {
-    border: none;
-    background: black;
-    padding: 12px 30px;
-    color: white;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 15px;
-    cursor: pointer;
-  
-  }
-  
-  .navbar-button button:hover {
-    background: #333;
-  }
+.search-bar input {
+  width: 250px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+}
+
+.nav-search-btn {
+  width: 20px;
+}
+
+.search-bar button {
+  position: relative;
+  background-color: #000000;
+  padding: 10px;
+  width: 50px;
+  height: 37px;
+  left: -10px;
+  border-radius: 0 5px 5px 0;
+  color: #ffffff;
+  cursor: pointer;
+  border: none;
+}
+
+.search-bar button svg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-bar button:hover {
+  background: #333;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+.navbar-links a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links a:hover {
+  color: gray;
+  transition: 0.3s;
+}
+
+.navbar-button button {
+  border: none;
+  background: black;
+  padding: 12px 30px;
+  color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.navbar-button button:hover {
+  background: #333;
+}
+
+/* Business Dropdown Styles */
+.business-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.business-dropdown-btn {
+  background: none;
+  border: none;
+  color: black;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  font-size: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0;
+}
+
+.business-dropdown-btn:hover {
+  color: gray;
+  transition: 0.3s;
+}
+
+.business-dropdown-btn svg {
+  font-size: 12px;
+}
+
+.business-dropdown-content {
+  position: absolute;
+  background-color: white;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  border-radius: 5px;
+  top: 100%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.business-dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+  font-weight: normal;
+}
+
+.business-dropdown-content a:hover {
+  background-color: #f1f1f1;
+  color: black;
+}

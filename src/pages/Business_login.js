@@ -1,44 +1,64 @@
-import React from 'react';
-import logo from '../logo.png'; 
-import '../components/Style/Business_login.css'; 
+import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
+import { FcGoogle } from 'react-icons/fc';
+import ReCAPTCHA from "react-google-recaptcha";
+import '../components/Style/Business_login.css';
 
-const BusinessLogin = () => {
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Handle form submission (e.g., send data to backend)
-    const formData = new FormData(event.target);
-    const data = {
-      email: formData.get('email'),
-      password: formData.get('password'),
-    };
-    console.log('Form Data:', data);
+function BusinessLogin() {
+  const recaptchaRef = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const token = await recaptchaRef.current.executeAsync();
+      console.log('reCAPTCHA token:', token);
+
+      // TODO: Send token to backend for verification and proceed with authentication
+      const formData = new FormData(e.target);
+      const data = {
+        email: formData.get('email'),
+        password: formData.get('password'),
+      };
+      console.log('Form Data:', data);
+
+    } catch (error) {
+      console.error('reCAPTCHA error:', error);
+      alert('Failed to verify reCAPTCHA. Please try again.');
+    }
   };
 
   return (
-    <div className="businesslogin-container">
-      <img src={logo} className="businesslogin-logo" alt="logo" />
-      <div className="businesslogin-box">
+    <div className="BusinessLogin">
+      <Link to="/">
+        <h2 className="logo-title">ZilBiz</h2>
+      </Link>
+      <div className="businesslogin-container">
         <h2>Sign In as Business</h2>
         <p>Welcome back</p>
-        <button className="google-businesslogin">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google Icon" className="google-icon" />
-          Sign in with Google
+        <button className="google-btn">
+          <FcGoogle className="google-icon" /> Sign in with Google
         </button>
-        <p>or</p>
-        <form className="businesslogin-form" onSubmit={handleSubmit}>
-          <input type="email" name="email" placeholder="Email" required />
+        <div className="or-divider">
+          <span>or</span>
+        </div>
+        <form className="login-form" onSubmit={handleSubmit}>
+          <input type="email" name="email" placeholder="Business Email" required />
           <input type="password" name="password" placeholder="Password" required />
           <div className="button-group">
-            <a href="/home" className="back-home">Back to Home</a>
-            <button type="submit" className="businesslogin-button">Sign In</button>
+            <button type="submit">Sign In</button>
           </div>
         </form>
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          sitekey="6Ldk7AIrAAAAAL2Wd660KO73pwESxmOZ0pbzlLiO"
+          size="invisible"
+        />
         <div className="signup-link">
-          No account? <a href="/signup">Sign Up</a>
+          No account? <Link to="/business-signup">Sign Up</Link>
         </div>
       </div>
     </div>
   );
-};
+}
 
 export default BusinessLogin;

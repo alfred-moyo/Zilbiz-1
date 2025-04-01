@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FaStar, FaRegStar, FaSearch, FaChevronLeft, FaMapMarkerAlt, FaCamera } from 'react-icons/fa';
-import { MAP_API_KEY, MAP_DEFAULT_OPTIONS } from '../config/googleMaps';
+import { MAP_API_KEY, MAP_DEFAULT_OPTIONS } from '../backend/config/googleMaps';
 import Navbar from '../components/Navbar'
-import Footer from '../components/Footer';
 import '../components/Style/Reviews.css';
 
 function WriteReview() {
