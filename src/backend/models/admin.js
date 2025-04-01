@@ -6,9 +6,8 @@ class Admin {
     this.collection = db.collection('admins');
   }
 
-  /**
-   * Create a new admin with hashed password
-   */
+
+// Create a new admin with hashed password
   async createAdmin({ email, password, name }) {
     try {
       // Check if admin already exists
@@ -48,16 +47,14 @@ class Admin {
     }
   }
 
-  /**
-   * Find admin by email
-   */
+
+// Find admin by email
   async findAdminByEmail(email) {
     return await this.collection.findOne({ email });
   }
 
-  /**
-   * Verify admin credentials
-   */
+ 
+  // Verify admin credentials
   async verifyAdmin(email, password) {
     try {
       const admin = await this.findAdminByEmail(email);
@@ -87,9 +84,8 @@ class Admin {
     }
   }
 
-  /**
-   * Get all admins (for super admin use)
-   */
+
+// Get all admins (for super admin use)
   async getAllAdmins() {
     try {
       return await this.collection.find(
@@ -102,9 +98,8 @@ class Admin {
     }
   }
 
-  /**
-   * Update admin profile
-   */
+
+// Update admin profile
   async updateAdmin(id, updateData) {
     try {
       // Remove sensitive fields if present
