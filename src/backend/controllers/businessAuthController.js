@@ -67,4 +67,25 @@ const loginBusiness = async (req, res) => {
   }
 };
 
-module.exports = { registerBusiness, loginBusiness };
+const getAllBusinesses = async (req, res) => {
+    try {
+      const db = getDb();
+      const businessModel = new Business(db);
+      
+      const businesses = await businessModel.getAllBusinesses();
+      
+      // Round average ratings
+      const businessesWithRoundedRatings = businesses.map(business => ({
+        ...business,
+        averageRating: business.averageRating ? Math.round(business.averageRating) : 0
+      }));
+      
+      res.json(businessesWithRoundedRatings);
+    } catch (error) {
+      console.error('Error in getAllBusinesses:', error);
+      res.status(500).json({ error: 'Failed to fetch businesses' });
+    }
+  };
+  
+
+module.exports = { registerBusiness, loginBusiness, getAllBusinesses };
