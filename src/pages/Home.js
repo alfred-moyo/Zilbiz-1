@@ -1,12 +1,14 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import Chatbot from './Chatbot'
 import '../components/Style/Home.css';
 
 function Home() {
   return (
     <div className="Home">
       <Navbar />
+      <Chatbot />
       <div className="universal-container">
         <div className='hero'>
             <h1>ZilBiz</h1>

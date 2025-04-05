@@ -17,7 +17,7 @@
     margin-bottom: 30px;
   }
   
-  .container {
+.NotFound .container {
     max-width: 600px;
     width: 100%;
     padding: 40px;
@@ -27,20 +27,20 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   }
   
-  h1 {
+  .NotFound h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #000000;
     font-weight: 600;
   }
   
-  .message {
+  .NotFound .message {
     font-size: 1.1rem;
     color: #666666;
     margin-bottom: 30px;
   }
   
-  .suggestions {
+  .NotFound .suggestions {
     text-align: left;
     margin: 30px 0;
     padding: 20px;
@@ -48,29 +48,29 @@
     border-radius: 8px;
   }
   
-  .suggestions p {
+  .NotFound .suggestions p {
     font-weight: 500;
     margin-bottom: 10px;
     color: #000000;
   }
   
-  .suggestions ul {
+  .NotFound .suggestions ul {
     list-style-type: none;
     padding-left: 0;
   }
   
-  .suggestions li {
+  .NotFound .suggestions li {
     margin: 10px 0;
   }
   
-  .suggestions a {
+  .NotFound .suggestions a {
     color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
     font-weight: 500;
   }
   
-  .suggestions a:hover {
+  .NotFound .suggestions a:hover {
     color: #666666;
     text-decoration: underline;
   }

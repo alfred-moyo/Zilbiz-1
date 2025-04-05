@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import ReCAPTCHA from "react-google-recaptcha";
 import '../components/Style/Contact.css';
+import Image from '../assets/contact-us-svg.svg'
 
 function ContactUs() {
   const [formData, setFormData] = useState({
@@ -44,6 +45,7 @@ function ContactUs() {
   return (
     <div className="ContactUs">
       <Navbar />
+      <img src={Image} className='contact_us_image'/>
       <div className="ContactUs-container">
         <h2>Contact Us</h2>
         <p>Have questions or feedback? We'd love to hear from you!</p>

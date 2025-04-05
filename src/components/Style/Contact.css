@@ -1,10 +1,17 @@
 .ContactUs {
 }
 
+.contact_us_image {
+  position: absolute;
+  width: 500px;
+  margin: 100px 800px;
+  z-index: -1;
+}
+
 .ContactUs-container {
   width: 500px;
   padding: 30px;
-  margin: 120px auto; /* Center horizontally */
+  margin: 200px 100px; 
   align-items: center;
   border: 1px solid #e0e0e0; 
   border-radius: 12px;
@@ -15,7 +22,7 @@
 .ContactUs-container h2 {
   margin-bottom: 20px;
   font-size: 24px;
-  color: #000000; /* Black text */
+  color: #000000; 
 }
 
 .ContactUs-container p {
@@ -34,7 +41,8 @@
 .contact-form .form-group textarea {
   width: 100%;
   border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  padding: 3px 5px 10px;
+  border-radius: 3px;
   font-size: 14px;
   color: #000000;
   background-color: #f9f9f9;
@@ -52,10 +60,10 @@
 
 .contact-form .form-group input {
   width: 100%;
-  padding: 1px 3px 10px;
+  padding: 3px 5px 10px;
   font-family: 'Poppins', sans-serif;
   border: 1px solid #e0e0e0; 
-  border-radius: 8px;
+  border-radius: 3px;
   font-size: 14px;
   color: #000000; 
   background-color: #f9f9f9; 

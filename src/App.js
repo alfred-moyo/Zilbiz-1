@@ -9,7 +9,8 @@ import BusinessSignup from './pages/Business_signup';
 import About from './pages/About';
 import FAQ from './pages/FAQ';
 import TermsAndConditions from './pages/TermsAndConditions'
-import TermsOfUse from './pages/TermsOfUse'
+import TermsOfUse from './pages/TermsOfUse';
+import NotFound from './components/404'
 import { 
   BrowserRouter as Router, 
   Route, 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/faq" element={<FAQ />} />
           <Route path="/terms&conditions" element={<TermsAndConditions />} />
           <Route path="/terms-of-use" element={<TermsOfUse />} />
+          <Route path="/error404" element={<NotFound />} />
 
         </Routes>
     </Router>
