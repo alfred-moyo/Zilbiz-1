@@ -1,4 +1,4 @@
-require('../src/dotenv').config();
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -85,7 +85,7 @@ const PREDEFINED_RESPONSES = {
     keywords: ["list", "add business", "register business"]
   },
   "contact zilbiz": {
-    answer: "Reach us at: Email - info@zilbiz.mu | Phone - +230 1234 5678 | Office - Ebene Cybercity, Mauritius",
+    answer: "Reach us at: Email - info@zilbiz.mu | Phone - +230 1234 5678 | Office - Online, Mauritius",
     emoji: "📧📞",
     keywords: ["contact", "support", "help"]
   }
