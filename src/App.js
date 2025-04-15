@@ -2,6 +2,7 @@ import './App.css';
 import Home from './pages/Home'
 import CustomerLogin from './pages/Customer_login';
 import CustomerSignup from './pages/Customer_signup';
+import CustomerDashboard from './pages/Customer';
 import Reviews from './pages/Reviews';
 import ContactUs from './pages/Contact';
 import BusinessLogin from './pages/Business_login';
@@ -27,6 +28,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<CustomerLogin />} />
           <Route path="/signup" element={<CustomerSignup />} />
+          <Route path="/customer" element={<CustomerDashboard />} />
           <Route path="/write-a-review" element={<Reviews />} />
           <Route path="/business-login" element={<BusinessLogin />} />
           <Route path="/business-signup" element={<BusinessSignup />} />

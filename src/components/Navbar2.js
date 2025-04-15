@@ -63,9 +63,9 @@ function Navbar() {
 
         {/* Login Button */}
         <div className="navbar-button">
-          <Link to="/login">
-            <button type="button" aria-label="Login">
-              LOGIN
+          <Link to="/l">
+            <button type="button" aria-label="Logout">
+              Sign Out
             </button>
           </Link>
         </div>

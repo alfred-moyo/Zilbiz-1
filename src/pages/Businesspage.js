@@ -10,7 +10,6 @@ const ZilBizLanding = () => {
         <div className="nav-links">
           <a href="#features">Features</a>
           <a href="#solutions">Solutions</a>
-          <a href="#pricing">Pricing</a>
           <a href="#resources">Resources</a>
         </div>
         <div className="nav-actions">
@@ -24,10 +23,10 @@ const ZilBizLanding = () => {
         <div className="hero-content">
           <h1>Power Your Business with <span>ZilBiz</span></h1>
           <p>The all-in-one platform for modern businesses to grow, connect, and succeed in the digital economy.</p>
-          <div className="hero-cta">
+          {/* <div className="hero-cta">
             <button className="btn-primary btn-large">Start Free Trial</button>
             <button className="btn-secondary btn-large">Book Demo</button>
-          </div>
+          </div> */}
           <div className="trust-badge">
             <div className="verification-badge">
               <span className="verified-icon">✓</span>
@@ -40,9 +39,9 @@ const ZilBizLanding = () => {
             </div>
           </div>
         </div>
-        <div className="hero-image">
+        {/* <div className="hero-image">
           <img src="https://via.placeholder.com/600x400" alt="ZilBiz Dashboard Preview" />
-        </div>
+        </div> */}
       </section>
 
       {/* Verification Benefits */}

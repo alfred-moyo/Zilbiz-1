@@ -18,16 +18,6 @@ function Navbar() {
           <h2 className="Nav-title">ZilBiz</h2>
         </Link>
 
-        {/* Search Bar */}
-        <div className="search-bar">
-          <input type="text" placeholder="Search" aria-label="Search" />
-          <div className="nav-search-btn">
-            <button aria-label='Search button'>
-              <FaSearch />
-            </button>
-          </div>
-        </div>
-
         {/* Navigation Links */}
         <div className="navbar-links">
           <Link to="/write-a-review" aria-label="Write a review">
