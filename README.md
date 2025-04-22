@@ -1,5 +1,7 @@
-# Zilbiz
 
+---
+
+```markdown
 # Project Title
 
 AI-Driven SME Business Listing & Review Portal (ZilBiz)
@@ -35,4 +37,68 @@ ZilBiz is a web-based platform designed for Small and Medium Enterprises (SMEs) 
 - **Other Tools**: Postman, Git, VSCode
 
 ## 📂 Project Structure
+
+```
+ZilBiz/
+├── client/                # React Frontend
+├── server/                # Express Backend
+├── models/                # MongoDB Models
+├── routes/                # API Endpoints
+├── ai/                    # Sentiment Analysis Scripts
+├── public/                # Static Assets
+├── .env.example           # Environment Variables Template
+└── README.md              # This File
+```
+
+## 📦 Setup Instructions
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/alfred-moyo/zilbiz.git
+   ```
+
+2. Install dependencies:
+   ```bash
+   cd server && npm install
+   cd ../client && npm install
+   ```
+
+3. Add environment variables in a `.env` file:
+   ```
+   MONGO_URI=your_mongo_uri
+   JWT_SECRET=your_secret
+   PORT=5000
+   ```
+
+4. Start the app:
+   ```bash
+   cd server && npm run dev
+   cd client && npm start
+   ```
+
+## 📊 Sample AI Output
+
+Customer Review: *"The service was excellent and the team was friendly!"*
+
+**Prediction**: Positive sentiment (0.91 confidence)
+
+---
+
+## 👥 Contributors
+
+- Alfred Moyo – Fullstack Developer, AI Integration
+
+## 📃 License
+
+MIT License
+
+---
+
+## 📞 Contact
+
+For any inquiries or support, reach out via [contact@zilbiz.com]
+
+```
+
+---
 
